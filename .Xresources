@@ -72,15 +72,15 @@ urxvt*background:         rgba:0000/2b00/3600/dc00
 !fonts
 !urxvt*font:            xft:monaco:bold:pixelsize=11
 !urxvt*boldFont:         xft:monaco:bold:pixelsize=11
-URxvt*font:             xft:Ubuntu Mono:pixelsize=30
-urxvt*boldFont:         xft:Ubuntu Mono:bold:pixelsize=30
+URxvt*font:             xft:Ubuntu Mono:size=12
+urxvt*boldFont:         xft:Ubuntu Mono:bold:size=12
 urxvt*faceName:		Ubuntu Mono
 urxvt*depth:            32
-Xft*dpi:                120
+Xft*dpi:                240
 Xft*antialias:          true
 Xft*hinting:            full
 
-font:                   xft:Ubuntu:pixelsize:26
+font:                   xft:Ubuntu:size:10
 
 urxvt.intensityStyles: false
 
