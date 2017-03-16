@@ -173,9 +173,7 @@ workspace 8 output DVI-I-1
 
 # Run script / start applications
 
-#exec ~/.config/i3/start
-exec xcompmgr -n
-exec redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0
+exec ~/.config/i3/start
 
 set $uftext #9999a2
 set $ydark #b57900

@@ -1,21 +1,6 @@
 #!/bin/bash
 
-#xcompmgr -n &
-#compton -cCGb --backend glx --vsync opengl &
-#redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
+feh --bg-scale ~/.bg.png &
+xcompmgr -n &
+redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
 xrdb ~/.Xresources &
-
-if [ -z $(pidof syncthing) ]
-then
-	syncthing -no-browser &
-fi
-
-#if [ -n "${GPG_AGENT_INFO}" ]; then
-#	 kill $(echo ${GPG_AGENT_INFO} | cut -d':' -f 2) >/dev/null 2>&1
-#fi
-#echo 8 > /tmp/x
-#gpg-agent --daemon --use-standard-socket &
-#echo 9 > /tmp/x
-~/.config/local/$(/bin/hostname) &
-
-echo 10 > /tmp/x
