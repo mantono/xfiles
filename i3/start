@@ -5,4 +5,5 @@ synclient TapButton1=0
 feh --bg-scale ~/.bg.png &
 xcompmgr -n &
 redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
+nm-applet &
 xrdb ~/.Xresources &
