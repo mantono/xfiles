@@ -7,4 +7,5 @@ xcompmgr -n &
 redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
 nm-applet &
 xrdb ~/.Xresources &
-xrandr --output DP1 --mode 2560x1600 --scale-from 3840x2160 --right-of eDP1
+xrandr --output DP1 --mode 3840x2160 --right-of eDP1
+xinput --set-prop 22 "Device Accel Constant Deceleration" 0.65
