@@ -76,7 +76,7 @@ URxvt*font:             xft:Ubuntu Mono:size=12
 urxvt*boldFont:         xft:Ubuntu Mono:bold:size=12
 urxvt*faceName:		Ubuntu Mono
 urxvt*depth:            32
-Xft*dpi:                240
+Xft*dpi:                230
 Xft*antialias:          true
 Xft*hinting:            full
 
