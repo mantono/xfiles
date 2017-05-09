@@ -179,7 +179,7 @@ client.urgent           #2f343a #900000 #ffffff #900000
 # finds out, if available)
 bar {
         status_command i3status --config ~/.config/i3/status
-        tray_output primary
+        tray_output eDP-1
 
 	colors {
 		background #002b36
