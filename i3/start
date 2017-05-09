@@ -4,6 +4,7 @@
 
 xcompmgr -n &
 #compton -cCGb --backend glx --vsync opengl &
+xrandr --output DVI-I-1 --primary
 redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
 xrdb ~/.Xresources &
 
