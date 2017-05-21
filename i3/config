@@ -149,7 +149,7 @@ workspace_layout stacked
 for_window [class="^[gG]imp" title="^Toolbox$"] floating enable, resize set 250 400, move right 200 px
 for_window [class="^[gG]imp" title="^Tool Options"] floating enable, resize set 225 500, move right 300 px
 for_window [class="^[gG]imp" title="^Layers$"] floating enable, resize set 225 450, move down 200 px
-hide_edge_borders smart
+hide_edge_borders none
 focus_follows_mouse no
 force_xinerama no
 
