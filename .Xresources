@@ -72,8 +72,8 @@ urxvt*background:         rgba:0000/2b00/3600/dc00
 !fonts
 !urxvt*font:            xft:monaco:bold:pixelsize=11
 !urxvt*boldFont:         xft:monaco:bold:pixelsize=11
-URxvt*font:             xft:Ubuntu Mono:size=12
-urxvt*boldFont:         xft:Ubuntu Mono:bold:size=12
+URxvt*font:             xft:Ubuntu Mono:size=10
+urxvt*boldFont:         xft:Ubuntu Mono:bold:size=10
 urxvt*faceName:		Ubuntu Mono
 urxvt*depth:            32
 Xft*dpi:                230
@@ -98,3 +98,17 @@ urxvt.urlLauncher: chromium-browser
 urxvt.matcher.button: 1
 urxvt.perl-ext-common: matcher
 
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #002b37, #002b37, #003642
+rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
+rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
+rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
+
+! rofi settings
+rofi.lines: 20
+rofi.font: Ubuntu Mono 10
+rofi.dpi: 230
+	
