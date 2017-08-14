@@ -114,13 +114,14 @@ bindsym $mod+Shift+Control+Right move container to workspace next
 
 # start applications on certain workspaces
 ## Examples ##
-# assign [class="^[gG]imp"] 4: photo
-# assign [class="^[gG]eeqie$"] 4: photo
+assign [class="^[Kk]eybase"] 10
+assign [class="^[Tt]elegram"] 10
+assign [class="^[Ss]lack"] 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+Control+r restart
+bindsym Control+Escape restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
