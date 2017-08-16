@@ -117,6 +117,9 @@ bindsym $mod+Shift+Control+Right move container to workspace next
 assign [class="^[mM][pP]layer$"] 6
 assign [class="^[sS]potify$"] 6
 assign [class="^URxvt$" title="^mplayer *"] 6
+assign [class="^[Kk]eybase"] 10
+assign [class="^[Tt]elegram"] 10
+assign [class="^[Ss]lack"] 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
