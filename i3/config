@@ -121,6 +121,9 @@ assign [class="^[Kk]eybase"] 10
 assign [class="^[Tt]elegram"] 10
 assign [class="^[Ss]lack"] 10
 
+for_window [title="^SNAYKUU - "] floating enable
+
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
