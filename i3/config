@@ -176,7 +176,7 @@ workspace 10 output eDP-1
 
 # Run script / start applications
 
-exec ~/.config/i3/start
+exec /home/anton/.config/i3/start &> i3-start.log
 
 set $uftext #9999a2
 set $ydark #b57900
