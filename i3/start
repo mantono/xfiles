@@ -2,7 +2,7 @@
 
 synclient MaxTapTime=0
 synclient TapButton1=0
-xcompmgr -n &
+compton --backend glx &
 redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
 nm-applet &
 xrdb ~/.Xresources &
