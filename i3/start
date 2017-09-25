@@ -1,12 +1,13 @@
 #!/bin/sh
 
-~/.config/local/$(/bin/hostname) &
+$HOME/.config/local/$(/bin/hostname) &
 
-xcompmgr -n &
-#compton -cCGb --backend glx --vsync opengl &
-xrandr --output DVI-I-1 --primary --right-of HDM1-1
+#xcompmgr -n &
+compton -cCGb --backend glx --vsync opengl &
+xrandr --output DVI-I-1 --primary --right-of HDMI-1
 redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
-xrdb ~/.Xresources &
+setxkbmap se
+xrdb $HOME/.Xresources &
 
 if [ -z $(pidof syncthing) ]
 then
