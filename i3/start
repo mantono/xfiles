@@ -6,6 +6,8 @@ $HOME/.config/local/$(/bin/hostname) &
 compton -cCGb --backend glx --vsync opengl &
 xrandr --output DVI-I-2 --primary --right-of HDMI-0
 redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
+# Disable PC Speaker / beep
+xset -b
 setxkbmap se
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 

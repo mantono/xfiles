@@ -151,23 +151,24 @@ for_window [class="^[gG]imp" title="^Toolbox$"] floating enable, resize set 250 
 for_window [class="^[gG]imp" title="^Tool Options"] floating enable, resize set 225 500, move right 300 px
 for_window [class="^[gG]imp" title="^Layers$"] floating enable, resize set 225 450, move down 200 px
 for_window [title="^SNAYKUU - "] floating enable
+for_window [class="^[pP]inentry-" title="^pinentry"] floating enable
 hide_edge_borders none
 focus_follows_mouse no
 force_xinerama no
 
 workspace_auto_back_and_forth yes
 
-workspace 1 output HDMI-1
-workspace 2 output HDMI-1
-workspace 3 output HDMI-1
-workspace 4 output HDMI-1
-workspace 5 output HDMI-1
+workspace 1 output HDMI-0
+workspace 2 output HDMI-0
+workspace 3 output HDMI-0
+workspace 4 output HDMI-0
+workspace 5 output HDMI-0
 
-workspace 6 output DVI-I-1
-workspace 7 output DVI-I-1
-workspace 8 output DVI-I-1
-workspace 9 output DVI-I-1
-workspace 10 output DVI-I-1
+workspace 6 output DVI-I-2
+workspace 7 output DVI-I-2
+workspace 8 output DVI-I-2
+workspace 9 output DVI-I-2
+workspace 10 output DVI-I-2
 
 # Run script / start applications
 

@@ -98,6 +98,10 @@ urxvt*shading:          0
 urxvt*inheritPixmap:    false
 urxvt*internalBorder:   4
 urxvt*cursorBlink:      true
+!URxvt.keysym.Home: \033[1~
+!URxvt.keysym.End: \033[4~
+!URxvt.keysym.KP_Home: \033[1~
+!URxvt.keysym.KP_End:  \033[4~
 
 !urlshit
 urxvt.urlLauncher: chromium-browser
