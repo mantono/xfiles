@@ -9,6 +9,7 @@ redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
 # Disable PC Speaker / beep
 xset -b
 setxkbmap se
+pulseaudio &
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
 if [ -z $(pidof syncthing) ]
