@@ -44,6 +44,10 @@ bindsym $mod+s exec rofi -show window
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# screenshots
+bindsym --release Print exec scrot -q 100 -e 'mv $f /tmp/'
+bindsym --release shift+Print exec scrot -s -q 100 -e 'mv $f /tmp/'
+
 # change focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
