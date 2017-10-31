@@ -3,7 +3,7 @@
 synclient MaxTapTime=0
 synclient TapButton1=0
 compton --backend glx &
-redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
+redshift -l 59:18 -b 1:0.7 -t 7000:3400 -m randr &
 nm-applet &
 blueman-applet &
 xrdb ~/.Xresources &
