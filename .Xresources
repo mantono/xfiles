@@ -44,7 +44,7 @@
 !
 ! URxvt*background:            S_base03
 
-urxvt*background:         rgba:0000/2b00/3600/dc00
+urxvt*background:         rgba:0000/2b00/3600/ea00
 *foreground:              S_base0
 *fading:                  40
 *fadeColor:               S_base03
@@ -80,7 +80,9 @@ Xft*dpi:                230
 Xft*antialias:          true
 Xft*hinting:            full
 
-font:                   xft:Ubuntu:size:10
+i3*dpi:					250
+
+font:                   xft:Ubuntu:size:9
 
 urxvt.intensityStyles: false
 
@@ -109,6 +111,6 @@ rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
 
 ! rofi settings
 rofi.lines: 20
-rofi.font: Ubuntu Mono 10
+rofi.font: Fira Code 8
 rofi.dpi: 230
-	
+rofi.show-icons: true	
