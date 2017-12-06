@@ -126,7 +126,8 @@ assign [class="^[Tt]elegram"] 10
 assign [class="^[Ss]lack"] 10
 
 for_window [title="^SNAYKUU - "] floating enable
-
+for_window [class="^[gG]imp" title="^Toolbox$"] floating enable, resize set 250 400, move right 200 px
+for_window [class="^[fF]irefox" title="^Save As$"] floating enable, resize set 1600 1200, move position center
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -158,8 +159,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 workspace_layout stacked
-#for_window [class="URxvt"] layout splith
-for_window [class="^[gG]imp" title="^Toolbox$"] floating enable, resize set 250 400, move right 200 px
+
 #hide_edge_borders smart
 focus_follows_mouse no
 force_xinerama no
