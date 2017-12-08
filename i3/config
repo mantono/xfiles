@@ -181,6 +181,8 @@ workspace 10 output eDP-1
 # Run script / start applications
 
 exec /home/anton/.config/i3/start &> i3-start.log
+exec synclient MaxTapTime=0
+exec synclient TapButton1=0
 
 set $uftext #9999a2
 set $ydark #b57900
