@@ -13,7 +13,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Ubuntu Mono 11
+font pango:Fira Code 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -149,7 +149,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-workspace_layout stacked
+workspace_layout tabbed
 #for_window [class="URxvt"] layout splith
 for_window [class="^[gG]imp" title="^Toolbox$"] floating enable, resize set 250 400, move right 200 px
 for_window [class="^[gG]imp" title="^Tool Options"] floating enable, resize set 225 500, move right 300 px
@@ -179,10 +179,11 @@ workspace 10 output DVI-I-2
 #exec ~/.xinitrc
 
 set $uftext #9999a2
-set $ydark #b57900
-set $ylight #ff9300
+set $greendark #68A81E
+set $greenlight #6BC418
+set $darkText #222222
 
-client.focused          $ylight	$ydark #ffffff $ydark
+client.focused          $greenlight	$greendark $darkText $greendark
 client.focused_inactive #305b66 #103b46 $uftext #103b46
 client.unfocused        #305b66 #103b46 $uftext #103b46
 client.urgent           #2f343a #900000 #ffffff #900000
