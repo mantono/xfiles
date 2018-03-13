@@ -1,14 +1,16 @@
 #!/bin/bash
 
-synclient MaxTapTime=0
-synclient TapButton1=0
-compton --backend glx &
-redshift -l 59:18 -b 1:0.7 -t 7000:3400 -m randr &
+xrandr | grep 'DP-1 connected' && xrandr --output DP-1 --primary --mode 3840x2160 --left-of eDP-1 --screen 0 --fb 7040x2160 || xrandr --output eDP-1 --primary
+#xrandr --output eDP-1 --dpi 96
+#xrandr | grep 'DP-1 connected' && xrandr dual_monitors || single_monitor
+xrandr --output DP-1 --left-of DP-1
+#compton --backend glx &
+#redshift -l 30:18 -b 1:0.7 -t 7000:3400 -m randr &
 nm-applet &
 blueman-applet &
 xrdb ~/.Xresources &
-xrandr | grep 'DP-1 connected' && xrandr --output DP-1 --primary --mode 3840x2160 --left-of eDP-1 || xrandr --output eDP-1 --primary
-xrandr --output eDP-1 --dpi 96
 feh --bg-scale ~/.bg.png &
-xinput --set-prop 22 "Device Accel Constant Deceleration" 0.65
+xinput --set-prop 23 libinput Accel Speed" -0.5
+synclient MaxTapTime=0
+synclient TapButton1=0
 date > /tmp/init

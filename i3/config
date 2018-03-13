@@ -117,10 +117,13 @@ bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+Shift+Control+Left move container to workspace prev
 bindsym $mod+Shift+Control+Right move container to workspace next
 
+bindsym Control+F8 exec /usr/local/bin/restart_monitor
+
 # start applications on certain workspaces
 assign [class="^[mM][pP]layer$"] 6
 assign [class="^[sS]potify$"] 6
 assign [class="^URxvt$" title="^mplayer *"] 6
+assign [class="^jetbrains" title="IntelliJ IDEA$"] 7
 assign [class="^[Kk]eybase"] 10
 assign [class="^[Tt]elegram"] 10
 assign [class="^[Ss]lack"] 10
@@ -128,6 +131,7 @@ assign [class="^[Ss]lack"] 10
 for_window [title="^SNAYKUU - "] floating enable
 for_window [class="^[gG]imp" title="^Toolbox$"] floating enable, resize set 250 400, move right 200 px
 for_window [class="^[fF]irefox" title="^Save As$"] floating enable, resize set 1600 1200, move position center
+for_window [class="^jetbrains-idea" title="^Documentation$"] floating enable, resize set 800 600, move position center
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
