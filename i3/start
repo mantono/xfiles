@@ -1,16 +1,18 @@
 #!/bin/bash
 
-xrandr | grep 'DP-1 connected' && xrandr --output DP-1 --primary --mode 3840x2160 --left-of eDP-1 --screen 0 --fb 7040x2160 || xrandr --output eDP-1 --primary
+###xrandr | grep 'DP-1 connected' && xrandr --output DP-1 --primary --mode 3840x2160 --left-of eDP-1 --screen 0 --fb 7040x2160 || xrandr --output eDP-1 --primary
 #xrandr --output eDP-1 --dpi 96
 #xrandr | grep 'DP-1 connected' && xrandr dual_monitors || single_monitor
-xrandr --output DP-1 --left-of DP-1
+#/home/anton/.bin/fix_monitors
 #compton --backend glx &
 #redshift -l 30:18 -b 1:0.7 -t 7000:3400 -m randr &
-nm-applet &
+#nm-applet &
 blueman-applet &
-xrdb ~/.Xresources &
+xrdb /home/anton/.Xresources &
 feh --bg-scale ~/.bg.png &
-xinput --set-prop 23 libinput Accel Speed" -0.5
+xinput --set-prop 23 "libinput Accel Speed" -0.5 &
+/home/anton/.xfiles/polybar.sh &
 synclient MaxTapTime=0
 synclient TapButton1=0
+setxkbmap se
 date > /tmp/init
