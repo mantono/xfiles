@@ -127,6 +127,8 @@ assign [class="^jetbrains" title="IntelliJ IDEA$"] 7
 assign [class="^[Kk]eybase"] 10
 assign [class="^[Tt]elegram"] 10
 assign [class="^[Ss]lack"] 10
+assign [class="^Firefox" title="Slack - "] 10
+assign [class="^[Mm]ullvad"] 10
 
 for_window [title="^SNAYKUU - "] floating enable
 for_window [class="^[gG]imp" title="^Toolbox$"] floating enable, resize set 250 400, move right 200 px
@@ -180,7 +182,7 @@ workspace_auto_back_and_forth yes
 # workspace 7 output DVI-I-1
 # workspace 8 output DVI-I-1
 
-workspace 10 output eDP-1
+workspace 10 output eDP1
 
 # Run script / start applications
 

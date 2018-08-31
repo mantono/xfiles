@@ -14,5 +14,7 @@ xinput --set-prop 23 "libinput Accel Speed" -0.5 &
 /home/anton/.xfiles/polybar.sh &
 synclient MaxTapTime=0
 synclient TapButton1=0
+ssh-agent -t 3600
 setxkbmap se
+xss-lock -- i3lock -nef -i /home/anton/.bg.png &
 date > /tmp/init
