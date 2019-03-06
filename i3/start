@@ -1,14 +1,13 @@
 #!/bin/sh
 
-$HOME/.config/local/$(/bin/hostname) &
-
 #xcompmgr -n &
-compton -cCGb --backend glx --vsync opengl &
+#compton -cCGb --backend glx --vsync opengl &
 xrandr --output DVI-I-2 --primary --right-of HDMI-0
 redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
 # Disable PC Speaker / beep
 xset -b
 setxkbmap se
+feh --bg-scale ~/.bg.png &
 pulseaudio &
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
@@ -21,3 +20,5 @@ if [ -n "${GPG_AGENT_INFO}" ]; then
 	 kill $(echo ${GPG_AGENT_INFO} | cut -d':' -f 2) >/dev/null 2>&1
 fi
 gpg-agent --daemon --use-standard-socket &
+xss-lock -- i3lock -nef -i /home/anton/.bg.png &
+date > /tmp/init
