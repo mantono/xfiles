@@ -12,6 +12,7 @@ general {
 }
 
 order += "disk /"
+order += "disk /home"
 order += "ipv6"
 order += "run_watch DHCP"
 order += "wireless _first_"
@@ -33,7 +34,7 @@ run_watch DHCP {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%Y-%m-%d %H:%M"
 }
 
 load {
@@ -42,4 +43,8 @@ load {
 
 disk "/" {
         format = "/ %avail"
+}
+
+disk "/home" {
+        format = "/home %avail"
 }
