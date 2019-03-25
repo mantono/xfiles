@@ -44,7 +44,8 @@
 !
 ! URxvt*background:            S_base03
 
-urxvt*background:         rgba:0000/2b00/3600/ea00
+!urxvt*background:         rgba:0100/1900/2500/ffff
+urxvt*background:         rgba:0200/0800/0A00/ffff
 *foreground:              S_base0
 *fading:                  40
 *fadeColor:               S_base03
@@ -104,7 +105,7 @@ urxvt.perl-ext-common: matcher
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #002b37, #002b37, #003642
+rofi.color-window: #02080A, #02080A, #003642
 rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
 rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
 rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281

@@ -9,12 +9,14 @@
 #nm-applet &
 blueman-applet &
 xrdb /home/anton/.Xresources &
-feh --bg-scale ~/.bg.png &
+feh --bg-scale ~/.xfiles/$(/bin/ls -1 ~/.xfiles|egrep ".png$|.jpg$|.jpeg$"|head -n 1)  &
 xinput --set-prop 23 "libinput Accel Speed" -0.5 &
 /home/anton/.xfiles/polybar.sh &
 synclient MaxTapTime=0
 synclient TapButton1=0
 ssh-agent -t 3600
 setxkbmap se
-xss-lock -- i3lock -nef -i /home/anton/.bg.png &
+xset s 180
+xset dpms 300 600 3600
+xss-lock -- ~/.bin/lock_screen &
 date > /tmp/init
