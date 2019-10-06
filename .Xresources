@@ -78,15 +78,15 @@ urxvt*background:         rgba:0000/2b00/3600/dc00
 !fonts
 !urxvt*font:            xft:monaco:bold:pixelsize=11
 !urxvt*boldFont:        xft:monaco:bold:pixelsize=11
-URxvt*font:             xft:Ubuntu Mono:pixelsize=16
-urxvt*boldFont:         xft:Ubuntu Mono:bold:pixelsize=16
-urxvt*faceName:		Ubuntu Mono
+URxvt*font:             xft:Ubuntu Mono:pixelsize=20
+urxvt*boldFont:         xft:Ubuntu Mono:bold:pixelsize=20
+urxvt*faceName:			Ubuntu Mono
 urxvt*depth:            32
-Xft*dpi:                96
+Xft*dpi:                130
 Xft*antialias:          true
 Xft*hinting:            full
 
-font:                   xft:Ubuntu:pixelsize:10
+font:                   xft:Ubuntu:pixelsize:14
 
 urxvt.intensityStyles: false
 
@@ -120,4 +120,4 @@ rofi.color-enabled: true
 ! rofi settings
 rofi.lines: 20
 rofi.show-icons: true
-rofi.font: Ubuntu Mono 12
+rofi.font: Ubuntu Mono 16

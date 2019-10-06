@@ -2,7 +2,9 @@
 
 #xcompmgr -n &
 #compton -cCGb --backend glx --vsync opengl &
-xrandr --output DVI-I-2 --primary --right-of HDMI-0
+xrnadr --output DP-2 --mode 3840x2160 --primary
+xrandr --output HDMI-1 --mode 2560x1440 --left-of DP-2 --rotate left
+xrandr --output HDMI-2 --mode 2560x1440 --right-of DP-2 --rotate right
 redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
 # Disable PC Speaker / beep
 xset -b
