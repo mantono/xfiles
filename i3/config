@@ -149,14 +149,16 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-workspace_layout stacked
+default_border pixel 2
+default_orientation auto
+workspace_layout tabbed
 #for_window [class="URxvt"] layout splith
 for_window [class="^[gG]imp" title="^Toolbox$"] floating enable, resize set 250 400, move right 200 px
 for_window [class="^[gG]imp" title="^Tool Options"] floating enable, resize set 225 500, move right 300 px
 for_window [class="^[gG]imp" title="^Layers$"] floating enable, resize set 225 450, move down 200 px
 for_window [title="^SNAYKUU - "] floating enable
 for_window [class="^[pP]inentry-" title="^pinentry"] floating enable
-hide_edge_borders none
+hide_edge_borders smart
 focus_follows_mouse no
 force_xinerama no
 
@@ -179,14 +181,24 @@ workspace 10 output HDMI-2
 
 #exec ~/.xinitrc
 
-set $uftext #9999a2
-set $ydark #b57900
-set $ylight #ff9300
+exec xrdb -load .Xdefaults
 
-client.focused          $ylight	$ydark #ffffff $ydark
-client.focused_inactive #305b66 #103b46 $uftext #103b46
-client.unfocused        #305b66 #103b46 $uftext #103b46
-client.urgent           #2f343a #900000 #ffffff #900000
+set_from_resource $uftext foreground
+set_from_resource $ufborder i3.unfocusBorder
+
+set_from_resource $ftext i3.focusText
+set_from_resource $dark  urxvt.background
+
+set_from_resource $comp i3.comp
+set_from_resource $primary i3.focusPrimary
+
+# class                 border    backg   text            indicat child_border
+client.focused          $primary  $dark   $ftext          $primary $primary
+client.focused_inactive $ufborder $dark   $uftext         $dark   $ufborder
+client.unfocused        $ufborder $dark   $uftext         $dark   $ufborder
+client.urgent           $comp     $dark   $uftext         $comp   $comp
+client.placeholder      $ufborder $dark   $uftext         $dark   $ufborder
+client.background       $dark
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -196,9 +208,9 @@ bar {
         tray_output primary
 
 	colors {
-		background #002b36
-		statusline #ffffff
-		separator $ylight
+		background $dark
+		statusline $uftext
+		separator  $ftext
 	}
 }
 
