@@ -222,6 +222,12 @@ bar {
 		background $dark
 		statusline $uftext
 		separator  $ftext
+
+		#<colorclass>       <border>    <background>  <text>
+		focused_workspace   $primary    $dark        $ftext
+		active_workspace    $primary    $dark        $ftext
+		inactive_workspace  $ufborder   $dark        $uftext
+		urgent_workspace    $comp       $dark        $uftext
 	}
 }
 
@@ -232,6 +238,13 @@ bar {
 
 	colors {
 		background $dark
-		statusline $plt
+		statusline $uftext
+		separator  $ftext
+
+		#<colorclass>       <border>    <background>  <text>
+		focused_workspace   $primary    $dark        $ftext
+		active_workspace    $primary    $dark        $ftext
+		inactive_workspace  $ufborder   $dark        $uftext
+		urgent_workspace    $comp       $dark        $uftext		
 	}
 }
