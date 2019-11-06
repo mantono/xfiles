@@ -13,7 +13,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Fira Code 8
+font pango:Fira Mono 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -164,9 +164,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+default_border pixel 2
+default_orientation auto
 workspace_layout tabbed
 
-#hide_edge_borders smart
+hide_edge_borders smart
 focus_follows_mouse no
 force_xinerama no
 
@@ -189,35 +191,24 @@ workspace 10 output eDP1
 exec /home/anton/.config/i3/start &> i3-start.log
 exec synclient MaxTapTime=0
 exec synclient TapButton1=0
+exec xrdb -load .Xdefaults
 
-set $uftext #9999a2
+set_from_resource $uftext foreground
+set_from_resource $ufborder i3.unfocusBorder
 
-# Primary (Hue 196, Saturation 80)
-# Light (Value xx)
-# Dark (Value xx)
+set_from_resource $ftext i3.focusText
+set_from_resource $dark  urxvt.background
 
-# Secondary (Hue 196, Saturation xx)
-# Light (Value xx)
-# Dark (Value xx)
+set_from_resource $comp i3.comp
+set_from_resource $primary i3.focusPrimary
 
-# Complmentary (Hue 23, Saturation xx)
-# Light (Value xx)
-# Dark (Value xx)
-
-# Dark
-set $dark #02080A
-# Primary Light
-set $plt #3AB2DE
-# Secondary Light
-set $slt #2590B8
-# Complementary
-set $comp #ff946e
-
-#<colorclass>		<border>	<background>	<text>		<indicator>	<child_border>
-client.focused          $slt		$plt 		$dark		$dark		$slt
-client.focused_inactive $slt	 	$dark		$slt		$slt		$slt
-client.unfocused        $slt	 	$dark		$slt		$slt		$slt
-client.urgent           $comp	 	#900000		#ffffff		#900000
+# class                 border    backg   text            indicat child_border
+client.focused          $primary  $dark   $ftext          $primary $primary
+client.focused_inactive $ufborder $dark   $uftext         $dark   $ufborder
+client.unfocused        $ufborder $dark   $uftext         $dark   $ufborder
+client.urgent           $comp     $dark   $uftext         $comp   $comp
+client.placeholder      $ufborder $dark   $uftext         $dark   $ufborder
+client.background       $dark
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -229,7 +220,8 @@ bar {
 
 	colors {
 		background $dark
-		statusline $plt
+		statusline $uftext
+		separator  $ftext
 	}
 }
 

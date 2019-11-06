@@ -44,46 +44,45 @@
 !
 ! URxvt*background:            S_base03
 
-!urxvt*background:         rgba:0100/1900/2500/ffff
-urxvt*background:         rgba:0200/0800/0A00/ffff
-*foreground:              S_base0
+*background:              #141210
+urxvt*background:         #141210
+*foreground:              #c3c3c3
 *fading:                  40
-*fadeColor:               S_base03
-*cursorColor:             S_base1
-*pointerColorBackground:  S_base01
-*pointerColorForeground:  S_base1
+*fadeColor:               #002b36
+*cursorColor:             #93a1a1
+*pointerColorBackground:  #586e75
+*pointerColorForeground:  #93a1a1
 
-*color0:                  S_base02
-*color1:                  S_red
-*color2:                  S_green
-*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color9:                  S_orange
-*color8:                  S_base03
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
+*color0:                  #073642
+*color1:                  #dc322f
+*color2:                  #859900
+*color3:                  #b58900
+*color4:                  #268bd2
+*color5:                  #d33682
+*color6:                  #2aa198
+*color7:                  #073642
+*color9:                  #cb4b16
+*color8:                  #002b36
+*color10:                 #586e75
+*color11:                 #657b83
+*color12:                 #839496
+*color13:                 #6c71c4
+*color14:                 #93a1a1
+*color15:                 #fdf6e3
 
 !fonts
 !urxvt*font:            xft:monaco:bold:pixelsize=11
-!urxvt*boldFont:         xft:monaco:bold:pixelsize=11
-URxvt*font:             xft:Ubuntu Mono:size=10
-urxvt*boldFont:         xft:Ubuntu Mono:bold:size=10
-urxvt*faceName:		Ubuntu Mono
+!urxvt*boldFont:        xft:monaco:bold:pixelsize=11
+URxvt*font:             xft:Ubuntu Mono:pixelsize=28
+urxvt*boldFont:         xft:Ubuntu Mono:bold:pixelsize=28
+urxvt*faceName:	        Ubuntu Mono
 urxvt*depth:            32
-Xft*dpi:                230
+Xft.dpi:                180
+Xft.autohint:           0
 Xft*antialias:          true
 Xft*hinting:            full
 
-i3*dpi:					250
-
-font:                   xft:Ubuntu:size:9
+font:                   xft:Ubuntu:pixelsize:12
 
 urxvt.intensityStyles: false
 
@@ -100,3 +99,29 @@ urxvt*cursorBlink:      true
 urxvt.urlLauncher: chromium-browser
 urxvt.matcher.button: 1
 urxvt.perl-ext-common: matcher
+
+! --------------------
+! i3 color theme
+! --------------------
+
+i3.focusPrimary:      #308edb
+i3.focusText:         #50aefb
+
+i3.unfocusBorder:     #454545
+
+i3.comp:              #db308e
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #141210, #308edb
+!                  bf       fg       bgalt    hlbg     hlfg
+rofi.color-normal: #141210, #c3c3c3, #181816, #141210, #308edb
+rofi.color-active: #141210, #ffffff, #141210, #141210, #308edb
+rofi.color-urgent: #141210, #db308e, #141210, #141210, #308edb
+
+! rofi settings
+rofi.lines: 20
+rofi.show-icons: true
+rofi.font: Ubuntu Mono 16
