@@ -211,10 +211,24 @@ bar {
 		background $dark
 		statusline $uftext
 		separator  $ftext
+
+		#<colorclass>       <border>    <background>  <text>
+		focused_workspace   $primary    $dark        $ftext
+		active_workspace    $primary    $dark        $ftext
+		inactive_workspace  $ufborder   $dark        $uftext
+		urgent_workspace    $comp       $dark        $uftext
 	}
 }
 
 bar {
 	output HDMI-1
 	output HDMI-2
+
+	colors {
+		#<colorclass>       <border>    <background>  <text>
+		focused_workspace   $primary    $dark        $ftext
+		active_workspace    $primary    $dark        $ftext
+		inactive_workspace  $ufborder   $dark        $uftext
+		urgent_workspace    $comp       $dark        $uftext
+	}
 }
