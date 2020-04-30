@@ -214,9 +214,10 @@ client.background       $dark
 # finds out, if available)
 
 bar {
-	output eDP1
+        id bar-0
+	output eDP-1
         status_command i3status --config ~/.config/i3/status
-        tray_output eDP1
+        tray_output eDP-1
 
 	colors {
 		background $dark
@@ -232,9 +233,10 @@ bar {
 }
 
 bar {
-	output DP1
+        id bar-1
+	output DP-1
         status_command i3status --config ~/.config/i3/status
-        tray_output DP1
+        tray_output DP-1
 
 	colors {
 		background $dark
