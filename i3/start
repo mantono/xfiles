@@ -1,21 +1,11 @@
 #!/bin/bash
-
-###xrandr | grep 'DP-1 connected' && xrandr --output DP-1 --primary --mode 3840x2160 --left-of eDP-1 --screen 0 --fb 7040x2160 || xrandr --output eDP-1 --primary
-#xrandr --output eDP-1 --dpi 96
-#xrandr | grep 'DP-1 connected' && xrandr dual_monitors || single_monitor
-#/home/anton/.bin/fix_monitors
-#compton --backend glx &
-#redshift -l 30:18 -b 1:0.7 -t 7000:3400 -m randr &
-#nm-applet &
 blueman-applet &
-xrdb /home/anton/.Xresources &
-feh --bg-scale ~/.xfiles/$(/bin/ls -1 ~/.xfiles|egrep ".png$|.jpg$|.jpeg$"|head -n 1)  &
+feh --bg-scale ~/.xfiles/$(/bin/ls -a1 ~/.xfiles|egrep ".png$|.jpg$|.jpeg$"|head -n 1)  &
 xinput --set-prop 23 "libinput Accel Speed" -0.5 &
-synclient MaxTapTime=0
-synclient TapButton1=0
 ssh-agent -t 3600
 setxkbmap se
+pulseaudio --start -D &
+xset -b
 xset s 180
 xset dpms 300 600 3600
 xss-lock -- ~/.bin/lock_screen &
-date > /tmp/init
