@@ -3,6 +3,9 @@ blueman-applet &
 feh --bg-scale ~/.xfiles/$(/bin/ls -a1 ~/.xfiles|egrep ".png$|.jpg$|.jpeg$"|head -n 1)  &
 xinput --set-prop 23 "libinput Accel Speed" -0.5 &
 ssh-agent -t 3600
+# See https://unix.stackexchange.com/questions/98733/how-to-use-numeric-keypad-as-mouse?answertab=active#tab-top
+# For how to use numeric keys as to control mouse cursor
+setxkbmap -option keypad:pointerkeys
 setxkbmap se
 pulseaudio --start -D &
 xset -b
