@@ -220,7 +220,7 @@ client.background       $dark
 
 bar {
         id bar-0
-	    output eDP1
+	output eDP1
         status_command i3status --config ~/.config/i3/status
         tray_output eDP1
 
@@ -239,9 +239,9 @@ bar {
 
 bar {
         id bar-1
-        output DP1
+        output HDMI1
         status_command i3status --config ~/.config/i3/status
-        tray_output DP1
+        tray_output HDMI1
 
 	colors {
 		background $dark
