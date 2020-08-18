@@ -8,6 +8,7 @@ ssh-agent -t 3600
 setxkbmap -option keypad:pointerkeys
 setxkbmap se
 pulseaudio --start -D &
+set bell-style none
 xset -b
 xset s 180
 xset dpms 300 600 3600
