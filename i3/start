@@ -4,19 +4,25 @@ $HOME/.config/local/$(/bin/hostname) &
 
 #xcompmgr -n &
 compton -cCGb --backend glx --vsync opengl &
-redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
+#redshift -l 0:18 -b 1:0.7 -t 7000:3500 -m vidmode:screen=0 &
 # Disable PC Speaker / beep
 xset -b
+# See https://unix.stackexchange.com/questions/98733/how-to-use-numeric-keypad-as-mouse?answertab=active#tab-top
+# For how to use numeric keys as to control mouse cursor
+setxkbmap -option keypad:pointerkeys
 setxkbmap se
-pulseaudio &
+pulseaudio --kill
+pulseaudio --start -D
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
-
-if [ -z $(pidof syncthing) ]
-then
-	syncthing -no-browser &
-fi
 
 if [ -n "${GPG_AGENT_INFO}" ]; then
 	 kill $(echo ${GPG_AGENT_INFO} | cut -d':' -f 2) >/dev/null 2>&1
 fi
 gpg-agent --daemon --use-standard-socket &
+
+xrandr --output HDMI-1 --mode 2560x1440 --left-of DP-2 --rotate left
+xrandr --output HDMI-2 --mode 2560x1440 --right-of DP-2 --rotate right
+xrandr --output DP-2 --mode 3840x2160 --primary
+
+nitrogen --restore
+xset s 7200

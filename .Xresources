@@ -83,7 +83,7 @@ URxvt*font:             xft:Ubuntu Mono:pixelsize=22
 urxvt*boldFont:         xft:Ubuntu Mono:bold:pixelsize=22
 urxvt*faceName:	        Ubuntu Mono
 urxvt*depth:            32
-Xft*dpi:                96
+Xft*dpi:                120
 Xft*antialias:          true
 Xft*hinting:            full
 
@@ -133,4 +133,4 @@ rofi.color-urgent: #141210, #db308e, #141210, #141210, #308edb
 ! rofi settings
 rofi.lines: 20
 rofi.show-icons: true
-rofi.font: Ubuntu Mono 18
+rofi.font: Ubuntu Mono 14
